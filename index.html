@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>
+/* Reveal-on-scroll bootstrap — INLINE and dependency-free so page content can
+   never get stuck hidden if an external script fails to load. Fails open. */
+(function(){
+  var d=document; d.documentElement.classList.add('js');
+  function reveal(){
+    var els=d.querySelectorAll('.reveal:not(.in)'),vh=window.innerHeight||d.documentElement.clientHeight,i,r;
+    for(i=0;i<els.length;i++){r=els[i].getBoundingClientRect();if(r.top<vh*0.95&&r.bottom>0)els[i].classList.add('in');}
+  }
+  function showAll(){var e=d.querySelectorAll('.reveal'),i;for(i=0;i<e.length;i++)e[i].classList.add('in');}
+  function start(){reveal();window.addEventListener('scroll',reveal,{passive:true});window.addEventListener('resize',reveal,{passive:true});window.addEventListener('load',reveal);setTimeout(showAll,1500);}
+  if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',start);else start();
+})();
+</script>
+<title>It's OK to be AWESOME! — Ruthless &amp; Aggressive Positivity · Ted Hebert</title>
+<meta name="description" content="It's OK to be AWESOME! A field manual for refusing average, owning your time, building a better life, and having a damn good time doing it. By Ted Hebert." />
+<link rel="icon" href="assets/favicon.png" type="image/png" />
+<meta property="og:title" content="It's OK to be AWESOME! — Ruthless & Aggressive Positivity" />
+<meta property="og:description" content="A field manual for refusing average, owning your time, and becoming awesome on purpose. By Ted Hebert." />
+<meta property="og:type" content="website" />
+<link rel="stylesheet" href="colors_and_type.css?v=4" />
+<link rel="stylesheet" href="styles.css?v=4" />
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <div class="bar">
+    <div class="wrap nav-inner">
+      <a href="#top" class="brand" aria-label="It's OK to be AWESOME home">
+        <span class="logo-badge">IOKTBA</span>
+      </a>
+      <nav class="nav-links" id="navlinks">
+        <a class="link" href="#book">The Book</a>
+        <a class="link" href="#chapters">Chapters</a>
+        <a class="link" href="coaching.html">Coaching</a>
+        <a class="link" href="blog.html">Blog</a>
+        <a class="link" href="#about">Ted</a>
+        <a class="link" href="#contact">Contact</a>
+        <a class="btn btn-primary" href="#join">Get the field notes →</a>
+      </nav>
+      <button class="hamburger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===================== THE ORBIT (cinematic 3D scroll hero) ===================== -->
+  <section class="orbit" id="orbit" aria-label="It's OK to be AWESOME — cinematic intro">
+    <div class="orbit-stage">
+      <div class="orbit-scenes" id="orbitScenes">
+        <div class="orbit-scene" data-word="MOVE FAST" data-idx="01">
+          <video src="assets/hero-orbit/01-cybertruck.mp4" poster="assets/hero-orbit/01-cybertruck-poster.jpg"
+                 muted loop playsinline preload="auto" aria-hidden="true"></video>
+        </div>
+        <div class="orbit-scene" data-word="AIM HIGHER" data-idx="02">
+          <video src="assets/hero-orbit/02-starship.mp4" poster="assets/hero-orbit/02-starship-poster.jpg"
+                 muted loop playsinline preload="auto" aria-hidden="true"></video>
+        </div>
+        <div class="orbit-scene" data-word="LIVE LOUD" data-idx="03">
+          <video src="assets/hero-orbit/03-women.mp4" poster="assets/hero-orbit/03-women-poster.jpg"
+                 muted loop playsinline preload="auto" aria-hidden="true"></video>
+        </div>
+      </div>
+
+      <div class="orbit-grade" aria-hidden="true"></div>
+      <div class="orbit-grain" aria-hidden="true"></div>
+
+      <div class="orbit-caption" id="orbitCaption" aria-hidden="true"></div>
+
+      <div class="orbit-copy">
+        <div class="wrap">
+          <p class="orbit-eyebrow">Ruthless &amp; Aggressive Positivity</p>
+          <h1 class="orbit-title">It's OK to be <span class="pop">AWESOME!</span></h1>
+          <p class="orbit-sub">Speed, altitude, freedom, and a damn good time — everything you were told to want less of, turned all the way up.</p>
+          <div class="orbit-cta">
+            <a href="#join" class="btn btn-primary btn-lg">Get the field notes →</a>
+            <a href="#book" class="btn btn-ghost btn-lg">Meet the book</a>
+          </div>
+        </div>
+      </div>
+
+      <nav class="orbit-rail" id="orbitRail" aria-label="Jump to scene">
+        <button class="dot" data-jump="0" aria-label="Scene 1"></button>
+        <span class="line" aria-hidden="true"></span>
+        <button class="dot" data-jump="1" aria-label="Scene 2"></button>
+        <span class="line" aria-hidden="true"></span>
+        <button class="dot" data-jump="2" aria-label="Scene 3"></button>
+      </nav>
+
+      <div class="orbit-cue" aria-hidden="true"><span class="mouse"></span>Scroll</div>
+      <div class="orbit-stripe" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    </div>
+  </section>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="book">
+    <div class="hero-stripes" aria-hidden="true">
+      <i style="background:var(--rc-cocoa);height:220px"></i>
+      <i style="background:var(--rc-rust);height:270px"></i>
+      <i style="background:var(--rc-mustard);height:230px"></i>
+      <i style="background:var(--rc-sage);height:180px"></i>
+      <i style="background:var(--rc-cream-soft);height:250px"></i>
+    </div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="subtitle reveal">Ruthless &amp; Aggressive Positivity</p>
+        <h1 class="rc-h1 reveal d1">It's OK to be <span class="pop">AWESOME!</span></h1>
+        <p class="lead rc-p-lg reveal d2">A field manual for refusing average, owning your time, building a better life — and having a damn good time doing it.</p>
+        <div class="stripe-rule short reveal d2" style="margin-top:26px" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="hero-cta reveal d3">
+          <a href="#join" class="btn btn-primary btn-lg">Get the field notes →</a>
+          <a href="#chapters" class="btn btn-ghost btn-lg">Read the chapters</a>
+        </div>
+        <div class="hero-meta reveal d4">
+          <div class="item"><div class="n">8</div><div class="l">Chapters</div></div>
+          <div class="item"><div class="n sage">1</div><div class="l">AWESOME Oath</div></div>
+          <div class="item"><div class="n mustard">0</div><div class="l">Permission slips</div></div>
+        </div>
+      </div>
+      <div class="hero-art reveal d2">
+        <div class="frame">
+          <img src="assets/ted-hero.png" alt="Ted Hebert — living awesome on purpose" />
+          <div class="stripe-rule" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="tagcard" aria-hidden="true">Change the voltage.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MARQUEE ===================== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marquee">
+      <span>Average is available everywhere<i class="dot"></i><b>AWESOME has to be chosen</b></span>
+      <span>Carry joy like a blade<i class="dot"></i><b>Win the next thirty minutes</b></span>
+      <span>Fear attacks motion<i class="dot"></i><b>Name the monster</b></span>
+      <span>Own your time or someone else will rent your life<i class="dot"></i><b>I stopped asking permission</b></span>
+    </div>
+  </div>
+
+  <!-- ===================== MANIFESTO ===================== -->
+  <section class="section manifesto" id="manifesto">
+    <div class="wrap manifesto-grid">
+      <div class="reveal">
+        <p class="rc-eyebrow eyebrow-orange">The Author's Note</p>
+        <blockquote style="margin-top:18px">This is a book about becoming <span class="hl">awesome on purpose.</span> Not famous. Not perfect. The kind of person who walks into a room and changes the voltage.</blockquote>
+      </div>
+      <div class="body reveal d1">
+        <p>Too many good people — especially men — have been trained to apologize for wanting more out of life. More freedom. More money. More health. More fun. More stories worth telling when the bar gets quiet and someone finally asks, <span class="em">"So what did you actually do with your life?"</span></p>
+        <p>You can be strong without being stupid. Kind without being weak. Ambitious without becoming a soulless briefcase with blood-pressure medication. Funny, stylish, generous, fit, rich in time, rich in spirit — and hard as hell to manipulate.</p>
+        <p class="pull">It's OK to be AWESOME. Actually, it's more than OK. It's your responsibility.</p>
+        <p class="sig">— Ted Hebert</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CHAPTERS ===================== -->
+  <section class="section" id="chapters">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="rc-eyebrow eyebrow-orange">Inside the field manual</p>
+        <h2 class="rc-h2">Eight chapters. Zero permission slips.</h2>
+        <div class="stripe-rule short" style="margin-bottom:18px" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <p class="lead">No fluff. No good-vibes wallpaper. Just the moves that turn a life built by fear, habit, and other people's low expectations into one you actually chose.</p>
+      </div>
+      <div class="chap-grid">
+        <article class="chap reveal">
+          <div class="top"><span class="num">CH 01</span><i class="ic" data-lucide="compass" width="26" height="26"></i></div>
+          <h3>Dare to Be Different</h3>
+          <p>The first rule of an awesome life is simple: do what other people will not do. The real stuff lives on the other side of a little awkwardness.</p>
+          <p class="slogan">"Small brave beats large fantasy."</p>
+          <div class="stripe-rule" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        </article>
+        <article class="chap reveal d1">
+          <div class="top"><span class="num">CH 02</span><i class="ic" data-lucide="flame" width="26" height="26"></i></div>
+          <h3>Ruthless &amp; Aggressive Positivity</h3>
+          <p>Positivity got mugged by people who use it as wallpaper. Real positivity has boundaries, teeth, and the nerve to have hard conversations.</p>
+          <p class="slogan">"Carry joy like a blade."</p>
+          <div class="stripe-rule" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        </article>
+        <article class="chap reveal d2">
+          <div class="top"><span class="num">CH 03</span><i class="ic" data-lucide="target" width="26" height="26"></i></div>
+          <h3>Eat My Shorts</h3>
+          <p>Giant plans let you feel productive without doing anything. Win the next thirty minutes instead. Completion is expensive; announcements are cheap.</p>
+          <p class="slogan">"Clarity creates force."</p>
+          <div class="stripe-rule" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        </article>
+        <article class="chap reveal">
+          <div class="top"><span class="num">CH 04</span><i class="ic" data-lucide="wrench" width="26" height="26"></i></div>
+          <h3>Work Smarter, Not Harder</h3>
+          <p>Hard work isn't the enemy — stupid work is. A well-paid hostage is still a hostage. Most people don't need more hustle; they need a better lever.</p>
+          <p class="slogan">"Own your time or someone else rents your life."</p>
+          <div class="stripe-rule" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        </article>
+        <article class="chap reveal d1">
+          <div class="top"><span class="num">CH 05</span><i class="ic" data-lucide="dumbbell" width="26" height="26"></i></div>
+          <h3>Fitness of Body &amp; Mind</h3>
+          <p>Your body is not a side project. It's the vehicle that carries every dream you have. Muscle is metabolic armor. Train for life.</p>
+          <p class="slogan">"Convenience is stealing your pulse."</p>
+          <div class="stripe-rule" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        </article>
+        <article class="chap reveal d2">
+          <div class="top"><span class="num">CH 06</span><i class="ic" data-lucide="map" width="26" height="26"></i></div>
+          <h3>Do What You Want, When You Want</h3>
+          <p>Technology kicked a hole in the wall. The laptop is a jailbreak. Build the life that fits — you're allowed to want your life while you're still alive.</p>
+          <p class="slogan">"Status wants witnesses. Freedom wants presence."</p>
+          <div class="stripe-rule" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        </article>
+        <article class="chap reveal">
+          <div class="top"><span class="num">CH 07</span><i class="ic" data-lucide="sunrise" width="26" height="26"></i></div>
+          <h3>Life on Your Terms</h3>
+          <p>Don't wait to retire until you're too old to enjoy it. Later is a dangerous god. A bank account is useful — a life is the point.</p>
+          <p class="slogan">"Choose awake. Later has eaten enough."</p>
+          <div class="stripe-rule" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        </article>
+        <article class="chap reveal d1">
+          <div class="top"><span class="num">CH 08</span><i class="ic" data-lucide="shield" width="26" height="26"></i></div>
+          <h3>The Only Thing to Fear</h3>
+          <p>Fear is a con artist with excellent timing — it attacks motion. Name the monster and it gets smaller. Fear is allowed in the car; it does not get to drive.</p>
+          <p class="slogan">"Fire fear as CEO."</p>
+          <div class="stripe-rule" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STAT BAND (light) ===================== -->
+  <section class="section stats rc-light reveal">
+    <div class="wrap">
+      <p class="rc-eyebrow" style="color:var(--rc-orange-deep)">What this book is built to do</p>
+      <h2 class="rc-h2">Less buried. More built.</h2>
+      <div class="stat-grid">
+        <div class="stat"><div class="n" style="color:var(--rc-orange-deep)">8</div><div class="l">Chapters, no filler</div></div>
+        <div class="stat"><div class="n" style="color:var(--rc-sage-deep)">30</div><div class="l">Minutes — the only window that matters</div></div>
+        <div class="stat"><div class="n" style="color:var(--rc-rust)">1</div><div class="l">Oath worth signing</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== QUOTE BAND ===================== -->
+  <section class="section qband reveal">
+    <div class="wrap">
+      <p class="rc-eyebrow eyebrow-orange">From the preface</p>
+      <blockquote class="rc-h2" style="margin-top:22px">"Most people are not broken. They are buried."</blockquote>
+      <p class="attr">Are you awesome? — Ted Hebert</p>
+    </div>
+  </section>
+
+  <!-- ===================== OATH ===================== -->
+  <section class="section" id="oath" style="background:var(--rc-charcoal)">
+    <div class="wrap">
+      <div class="oath-card reveal">
+        <div class="oath-inner">
+          <p class="rc-eyebrow eyebrow-orange" style="text-align:center">Sign it. Live it.</p>
+          <h2 class="rc-h2 oath-h">The AWESOME Oath</h2>
+          <p class="sub rc-small">Eight lines. Read them out loud if you've got the nerve.</p>
+          <ul>
+            <li><span class="mk">1</span><span>I will move before I feel ready, and choose proof over applause.</span></li>
+            <li><span class="mk">2</span><span>I will build my body, train my mind, and protect my time.</span></li>
+            <li><span class="mk">3</span><span>I will use fear as a signal, not a sentence.</span></li>
+            <li><span class="mk">4</span><span>I will make money without selling my soul, and seek freedom without abandoning my responsibilities.</span></li>
+            <li><span class="mk">5</span><span>I will bring humor into heavy rooms and standards into sloppy ones.</span></li>
+            <li><span class="mk">6</span><span>I will not make misery my brand.</span></li>
+            <li><span class="mk">7</span><span>I will help others rise without shrinking to make anyone comfortable.</span></li>
+            <li><span class="mk">8</span><span>I will live now, love now, build now, and laugh now. I will be awesome on purpose.</span></li>
+          </ul>
+          <div class="cta"><a href="#join" class="btn btn-primary btn-lg">Take the oath — join the crew →</a></div>
+        </div>
+        <div class="stripe-rule" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT TED ===================== -->
+  <section class="section about" id="about" style="background:var(--rc-charcoal-deep)">
+    <div class="wrap about-grid">
+      <div class="about-portrait reveal">
+        <div class="frame">
+          <img src="assets/ted-about.jpg" alt="Ted Hebert" />
+          <div class="stripe-rule" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        </div>
+      </div>
+      <div>
+        <p class="rc-eyebrow eyebrow-orange reveal">Meet the author</p>
+        <h2 class="rc-h2 reveal d1">Ted Hebert doesn't do average.</h2>
+        <div class="body reveal d2">
+          <p>Ted writes for the people who suspect they're more capable than their current life shows — and he's right. <span class="pull">That's not an insult. That's gasoline.</span></p>
+          <p>Through <span class="em">It's OK to be AWESOME!</span> and the IOKTBA community, Ted helps men and women refuse the two bad deals modern life keeps offering: become a harmless houseplant, or become an angry cartoon of yourself. There's a third option — strong, kind, funny, free, and hard as hell to manipulate.</p>
+          <p>No good-vibes-only wallpaper. No permission slips. Just a better conversation about what you can do today with your body, your mind, your work, your money, your time, and your fear.</p>
+        </div>
+        <div class="socials reveal d3" aria-label="Follow Ted">
+          <a href="#" aria-label="LinkedIn"><span>IN</span></a>
+          <a href="#" aria-label="Instagram"><span>IG</span></a>
+          <a href="#" aria-label="X"><span>X</span></a>
+          <a href="#" aria-label="YouTube"><span>YT</span></a>
+          <a href="#" aria-label="Facebook"><span>FB</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EMAIL CAPTURE ===================== -->
+  <section class="section capture" id="join">
+    <div class="wrap capture-inner reveal">
+      <p class="rc-eyebrow eyebrow-orange">Join the community</p>
+      <h2 class="capture-h">Don't be fine.<br><span class="pop">Be awesome.</span></h2>
+      <p>Get the drops, the stories, and first dibs on the book. No spam. No permission slips.</p>
+      <form id="joinForm" novalidate>
+        <input type="email" id="joinEmail" name="email" placeholder="you@awesome.com" aria-label="Email address" required />
+        <button type="submit" class="btn btn-primary btn-lg">Count me in →</button>
+      </form>
+      <p class="form-msg" id="joinMsg" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="section contact" id="contact">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <p class="rc-eyebrow eyebrow-orange">Say hello</p>
+        <h2 class="rc-h2">Let's talk.</h2>
+        <p class="lead">Questions, speaking, bulk orders, or just want to tell us you took the oath? Reach out — a real human answers.</p>
+        <div class="contact-list">
+          <a href="mailto:info@oktobeawesome.com"><span class="ic"><i data-lucide="mail" width="20" height="20"></i></span> info@oktobeawesome.com</a>
+          <div class="row"><span class="ic"><i data-lucide="mountain" width="20" height="20"></i></span> Ruthless &amp; Aggressive Positivity HQ</div>
+        </div>
+        <div class="socials" aria-label="Follow">
+          <a href="#" aria-label="LinkedIn"><span>IN</span></a>
+          <a href="#" aria-label="Instagram"><span>IG</span></a>
+          <a href="#" aria-label="X"><span>X</span></a>
+          <a href="#" aria-label="YouTube"><span>YT</span></a>
+          <a href="#" aria-label="Facebook"><span>FB</span></a>
+        </div>
+      </div>
+      <form id="contactForm" class="reveal d1" novalidate>
+        <div class="field"><label for="cname">Name</label><input type="text" id="cname" name="name" required /></div>
+        <div class="field"><label for="cemail">Email</label><input type="email" id="cemail" name="email" required /></div>
+        <div class="field"><label for="cmsg">Message</label><textarea id="cmsg" name="message" required></textarea></div>
+        <button type="submit" class="btn btn-sage btn-lg">Send it →</button>
+        <p class="form-msg" id="contactMsg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="logo-badge foot-badge">IOKTBA</span>
+        <p class="tag">It's OK to be AWESOME! — a field manual for refusing average, owning your time, and becoming awesome on purpose.</p>
+      </div>
+      <div>
+        <h4>The Book</h4>
+        <ul>
+          <li><a href="#book">Overview</a></li>
+          <li><a href="#chapters">Chapters</a></li>
+          <li><a href="#oath">The AWESOME Oath</a></li>
+          <li><a href="#about">About Ted</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="#join">Field notes</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="coaching.html">Coaching</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:info@oktobeawesome.com">info@oktobeawesome.com</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span class="rc-mono">OKTOBEAWESOME.COM · © <span id="yr"></span> TED HEBERT</span>
+      <div class="stripe-rule short thin" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    </div>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Back to top"><i data-lucide="arrow-up" width="22" height="22"></i></button>
+
+<!-- Lucide deferred so a slow/blocked CDN can never stall the reveal logic below -->
+<script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script defer src="site.js"></script>
+</body>
+</html>

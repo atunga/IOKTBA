@@ -1,0 +1,237 @@
+/* ============================================================
+   IOKTBA Design System — Colors & Type
+   Source of truth: design/IOKTBA Landing.html (pulp-Americana:
+   cream paper, ink black, hot orange; Anton / Archivo / mono).
+   Token names keep the legacy --rc-* API so all consumers work.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  /* ---------- CORE PALETTE (from IOKTBA Landing) ---------- */
+  /* Ink — the near-black used for text, borders, dark bands */
+  --rc-charcoal:        #16130E;   /* primary ink / dark background */
+  --rc-charcoal-deep:   #100D09;   /* deepest ink */
+  --rc-charcoal-soft:   #211C14;   /* card surface on dark */
+
+  /* Cream — the paper. Dominant page surface. */
+  --rc-cream:           #F2E6C9;   /* primary cream paper */
+  --rc-cream-soft:      #F2E6C9;   /* page bg (same paper) */
+  --rc-parchment:       #E8D9AE;   /* parchment band */
+
+  /* Orange — PRIMARY. Hot pulp orange. */
+  --rc-orange:          #E76B1B;
+  --rc-orange-bright:   #F07E33;   /* hover */
+  --rc-orange-deep:     #C6540C;   /* press / eyebrow on cream */
+  --rc-orange-tint:     #ECDDB6;
+
+  /* Sage — footer-stripe accent only (sparing) */
+  --rc-sage:            #8FA98A;
+  --rc-sage-deep:       #6E8A6A;
+  --rc-sage-soft:       #CABD99;
+
+  /* Rust — deep orange-red accents / error surfaces */
+  --rc-rust:            #C6540C;
+  --rc-rust-deep:       #5C2B2E;
+  --rc-rust-soft:       #FF8A80;   /* error text on dark */
+
+  /* Mustard → parchment-gold accents */
+  --rc-mustard:         #E8D9AE;
+  --rc-mustard-deep:    #BCAE8B;
+  --rc-mustard-soft:    #ECDDB6;
+
+  /* Olive — the dark khaki in the stripe motif */
+  --rc-cocoa:           #473F30;
+  --rc-plum:            #5B5343;
+
+  /* ---------- NEON kept for API compat (rarely used) ---------- */
+  --rc-neon-orange:     #E76B1B;
+  --rc-neon-green:      #8FA98A;
+  --rc-neon-yellow:     #E8D9AE;
+  --rc-neon-glow-orange: 0 0 8px rgba(231,107,27,.8), 0 0 22px rgba(231,107,27,.5);
+  --rc-neon-glow-green:  0 0 8px rgba(143,169,138,.8), 0 0 22px rgba(143,169,138,.5);
+  --rc-neon-glow-yellow: 0 0 8px rgba(232,217,174,.8), 0 0 22px rgba(232,217,174,.5);
+
+  /* ---------- SEMANTIC — DARK SURFACES (ink bands) ---------- */
+  --rc-bg:              var(--rc-charcoal);
+  --rc-bg-elevated:     var(--rc-charcoal-soft);
+  --rc-bg-deep:         var(--rc-charcoal-deep);
+  --rc-fg-1:            var(--rc-cream);
+  --rc-fg-2:            #BCAE8B;                 /* secondary text on ink */
+  --rc-fg-3:            #7A6F59;                 /* tertiary on ink */
+  --rc-accent:          var(--rc-orange);
+  --rc-accent-fg:       var(--rc-charcoal);
+  --rc-success:         var(--rc-sage-deep);
+  --rc-warning:         var(--rc-mustard);
+  --rc-danger:          var(--rc-rust);
+
+  --rc-border:          rgba(242, 230, 201, 0.16);
+  --rc-border-strong:   rgba(242, 230, 201, 0.34);
+  --rc-divider:         rgba(242, 230, 201, 0.09);
+
+  /* Hard ink lines — the landing's signature 2px border + offset shadow */
+  --rc-line:            var(--rc-charcoal);
+  --rc-border-hard:     2px solid var(--rc-charcoal);
+  --rc-shadow-hard:     5px 5px 0 0 var(--rc-charcoal);
+  --rc-shadow-hard-sm:  3px 3px 0 0 var(--rc-charcoal);
+
+  /* ---------- SPACING ---------- */
+  --rc-space-1: 4px;  --rc-space-2: 8px;  --rc-space-3: 12px;
+  --rc-space-4: 16px; --rc-space-5: 24px; --rc-space-6: 32px;
+  --rc-space-7: 48px; --rc-space-8: 64px; --rc-space-9: 96px;
+
+  /* ---------- RADII — tight, print-like ---------- */
+  --rc-radius-xs: 3px;
+  --rc-radius-sm: 4px;
+  --rc-radius-md: 6px;    /* default card/button */
+  --rc-radius-lg: 10px;
+  --rc-radius-xl: 14px;
+  --rc-radius-pill: 6px;  /* pills are squared off in this system */
+
+  /* ---------- SHADOWS (soft kept for API compat; prefer hard) ---------- */
+  --rc-shadow-sm:  2px 2px 0 0 rgba(22,19,14,.9);
+  --rc-shadow-md:  4px 4px 0 0 rgba(22,19,14,.95);
+  --rc-shadow-lg:  6px 6px 0 0 var(--rc-charcoal);
+  --rc-shadow-inset: inset 0 0 0 2px var(--rc-charcoal);
+
+  /* ---------- FONTS ---------- */
+  --rc-font-display: 'Anton', 'Archivo Black', Impact, sans-serif;
+  --rc-font-sans:    'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --rc-font-mono:    'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+
+  /* ---------- TYPE SCALE ---------- */
+  --rc-text-xs:   12px;
+  --rc-text-sm:   14px;
+  --rc-text-base: 16px;
+  --rc-text-md:   18px;
+  --rc-text-lg:   22px;
+  --rc-text-xl:   28px;
+  --rc-text-2xl:  38px;
+  --rc-text-3xl:  56px;
+  --rc-text-4xl:  84px;
+  --rc-text-5xl: 120px;
+}
+
+/* ---------- LIGHT SURFACE OVERRIDE ----------
+   Apply `.rc-light` to flip a section onto cream paper. */
+.rc-light {
+  --rc-bg:          var(--rc-cream);
+  --rc-bg-elevated: #F7EDD6;
+  --rc-bg-deep:     var(--rc-parchment);
+  --rc-fg-1:        var(--rc-charcoal);
+  --rc-fg-2:        #5B5343;
+  --rc-fg-3:        #7A6F59;
+  --rc-border:      rgba(22, 19, 14, 0.9);
+  --rc-border-strong: var(--rc-charcoal);
+  --rc-divider:     rgba(22, 19, 14, 0.15);
+  background: var(--rc-bg);
+  color: var(--rc-fg-1);
+}
+
+/* ---------- SEMANTIC TYPE CLASSES ---------- */
+.rc-display {
+  font-family: var(--rc-font-display);
+  font-weight: 400;                 /* Anton is single-weight */
+  font-size: var(--rc-text-5xl);
+  line-height: 0.9;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--rc-fg-1);
+}
+.rc-h1 {
+  font-family: var(--rc-font-display);
+  font-weight: 400;
+  font-size: var(--rc-text-4xl);
+  line-height: 0.9;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+.rc-h2 {
+  font-family: var(--rc-font-display);
+  font-weight: 400;
+  font-size: var(--rc-text-3xl);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+.rc-h3 {
+  font-family: var(--rc-font-display);
+  font-weight: 400;
+  font-size: var(--rc-text-2xl);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+.rc-h4 {
+  font-family: var(--rc-font-sans);
+  font-weight: 800;
+  font-size: var(--rc-text-xl);
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.rc-eyebrow,
+.rc-label {
+  font-family: var(--rc-font-mono);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--rc-orange-deep);
+}
+.rc-p {
+  font-family: var(--rc-font-sans);
+  font-weight: 400;
+  font-size: var(--rc-text-base);
+  line-height: 1.55;
+  color: var(--rc-fg-1);
+  text-wrap: pretty;
+}
+.rc-p-lg {
+  font-family: var(--rc-font-sans);
+  font-weight: 400;
+  font-size: var(--rc-text-md);
+  line-height: 1.55;
+}
+.rc-small {
+  font-family: var(--rc-font-sans);
+  font-size: var(--rc-text-sm);
+  color: var(--rc-fg-2);
+}
+.rc-mono {
+  font-family: var(--rc-font-mono);
+  font-size: var(--rc-text-sm);
+  letter-spacing: 0.06em;
+}
+
+/* ---------- BRAND FLOURISHES ---------- */
+
+/* Hollow pulp headline — transparent fill, ink outline */
+.rc-outline {
+  color: transparent;
+  -webkit-text-stroke: 2.4px var(--rc-charcoal);
+}
+/* Orange pulp numeral/word — orange fill, ink outline */
+.rc-pulp {
+  color: var(--rc-orange);
+  -webkit-text-stroke: 2px var(--rc-charcoal);
+}
+
+/* The 4-stripe motif: sage / orange / cream / olive */
+.rc-stripes {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.rc-stripes > i {
+  display: block;
+  height: 6px;
+  border-radius: 1px;
+}
+.rc-stripes > i:nth-child(1) { background: var(--rc-sage); }
+.rc-stripes > i:nth-child(2) { background: var(--rc-orange); }
+.rc-stripes > i:nth-child(3) { background: var(--rc-mustard); }
+.rc-stripes > i:nth-child(4) { background: var(--rc-cocoa); }
+
+/* Neon text glow — kept for API compat */
+.rc-neon-orange { color: var(--rc-cream); text-shadow: var(--rc-neon-glow-orange); }
+.rc-neon-green  { color: var(--rc-cream); text-shadow: var(--rc-neon-glow-green); }

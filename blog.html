@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>
+/* Reveal-on-scroll bootstrap — INLINE and dependency-free so page content can
+   never get stuck hidden if an external script fails to load. Fails open. */
+(function(){
+  var d=document; d.documentElement.classList.add('js');
+  function reveal(){
+    var els=d.querySelectorAll('.reveal:not(.in)'),vh=window.innerHeight||d.documentElement.clientHeight,i,r;
+    for(i=0;i<els.length;i++){r=els[i].getBoundingClientRect();if(r.top<vh*0.95&&r.bottom>0)els[i].classList.add('in');}
+  }
+  function showAll(){var e=d.querySelectorAll('.reveal'),i;for(i=0;i<e.length;i++)e[i].classList.add('in');}
+  function start(){reveal();window.addEventListener('scroll',reveal,{passive:true});window.addEventListener('resize',reveal,{passive:true});window.addEventListener('load',reveal);setTimeout(showAll,1500);}
+  if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',start);else start();
+})();
+</script>
+<title>Field Notes — The It's OK to be AWESOME! Blog · Ted Hebert</title>
+<meta name="description" content="Field notes from It's OK to be AWESOME! — short, sharp essays on refusing average, owning your time, and becoming awesome on purpose. By Ted Hebert." />
+<link rel="icon" href="assets/favicon.png" type="image/png" />
+<link rel="stylesheet" href="colors_and_type.css?v=4" />
+<link rel="stylesheet" href="styles.css?v=4" />
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="bar">
+    <div class="wrap nav-inner">
+      <a href="index.html" class="brand" aria-label="It's OK to be AWESOME home">
+        <span class="logo-badge">IOKTBA</span>
+      </a>
+      <nav class="nav-links" id="navlinks">
+        <a class="link" href="index.html#book">The Book</a>
+        <a class="link" href="index.html#chapters">Chapters</a>
+        <a class="link" href="coaching.html">Coaching</a>
+        <a class="link" href="blog.html">Blog</a>
+        <a class="link" href="index.html#about">Ted</a>
+        <a class="btn btn-primary" href="index.html#join">Get the field notes →</a>
+      </nav>
+      <button class="hamburger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="hero-stripes" aria-hidden="true">
+      <i style="background:var(--rc-cocoa);height:220px"></i>
+      <i style="background:var(--rc-rust);height:270px"></i>
+      <i style="background:var(--rc-mustard);height:230px"></i>
+      <i style="background:var(--rc-sage);height:180px"></i>
+      <i style="background:var(--rc-cream-soft);height:250px"></i>
+    </div>
+    <div class="wrap inner">
+      <p class="rc-eyebrow eyebrow-orange reveal">The Field Notes</p>
+      <h1 class="rc-h1 reveal d1">Short, sharp, and <span class="pop">useful.</span></h1>
+      <div class="stripe-rule short reveal d1" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <p class="lead reveal d2">No 3,000-word think pieces nobody finishes. These are field notes — the same voice as the book, sized for a coffee break. Read one, do one thing, get on with your day.</p>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  <section class="section" style="padding-top:clamp(48px,7vw,80px)">
+    <div class="wrap">
+      <p class="rc-eyebrow eyebrow-orange reveal" style="margin-bottom:22px">Featured</p>
+      <article class="featured reveal">
+        <div class="media">
+          <img src="assets/rushmore.png" alt="Carve something worth remembering" />
+          <div class="stripe-rule" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="body">
+          <div class="post-meta"><span class="chip orange">Manifesto</span> <span>JUN 2026</span> <span>•</span> <span>6 MIN READ</span></div>
+          <h2 class="rc-h2">Most people aren't broken. They're buried.</h2>
+          <p>Buried under old advice, dull jobs, fake emergencies, and a thousand little invisible agreements they don't remember signing. Here's how you start digging out — not with a personality transplant, but with one honest move today.</p>
+          <div><a href="index.html#join" class="btn btn-primary">Read the field note →</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- POST GRID -->
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="rc-eyebrow eyebrow-orange">Latest</p>
+        <h2 class="rc-h2">From the manual.</h2>
+        <div class="stripe-rule short" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="post-grid">
+
+        <article class="post reveal">
+          <div class="thumb"><span class="num">01</span><div class="stripe-rule" aria-hidden="true"><i></i><i></i><i></i><i></i></div></div>
+          <div class="pbody">
+            <div class="post-meta"><span class="chip sage">Courage</span> <span>5 MIN</span></div>
+            <h3>Small brave beats large fantasy</h3>
+            <p>The meeting you won't ask for. The number you won't say out loud. Access is usually guarded by nothing more than a little awkwardness — and three seconds of nerve.</p>
+            <span class="more">Read →</span>
+          </div>
+        </article>
+
+        <article class="post reveal d1">
+          <div class="thumb"><span class="num">02</span><div class="stripe-rule" aria-hidden="true"><i></i><i></i><i></i><i></i></div></div>
+          <div class="pbody">
+            <div class="post-meta"><span class="chip orange">Mindset</span> <span>4 MIN</span></div>
+            <h3>Carry joy like a blade</h3>
+            <p>"Good vibes only" is conflict avoidance wearing a smile. Real positivity has boundaries, teeth, and the nerve to have the hard conversation today.</p>
+            <span class="more">Read →</span>
+          </div>
+        </article>
+
+        <article class="post reveal d2">
+          <div class="thumb"><span class="num">03</span><div class="stripe-rule" aria-hidden="true"><i></i><i></i><i></i><i></i></div></div>
+          <div class="pbody">
+            <div class="post-meta"><span class="chip mustard">Execution</span> <span>4 MIN</span></div>
+            <h3>Win the next thirty minutes</h3>
+            <p>You don't need a color-coded five-year plan. You need ten honest pushups and one finished thing. Completion is expensive; announcements are cheap.</p>
+            <span class="more">Read →</span>
+          </div>
+        </article>
+
+        <article class="post reveal">
+          <div class="thumb"><span class="num">04</span><div class="stripe-rule" aria-hidden="true"><i></i><i></i><i></i><i></i></div></div>
+          <div class="pbody">
+            <div class="post-meta"><span class="chip rust">Work</span> <span>6 MIN</span></div>
+            <h3>A well-paid hostage is still a hostage</h3>
+            <p>Hard work isn't the enemy — stupid work is. Most people don't need more hustle. They need a better lever and the spine to pull it.</p>
+            <span class="more">Read →</span>
+          </div>
+        </article>
+
+        <article class="post reveal d1">
+          <div class="thumb"><span class="num">05</span><div class="stripe-rule" aria-hidden="true"><i></i><i></i><i></i><i></i></div></div>
+          <div class="pbody">
+            <div class="post-meta"><span class="chip sage">Fitness</span> <span>5 MIN</span></div>
+            <h3>Convenience is stealing your pulse</h3>
+            <p>Your body isn't a side project — it's the vehicle that carries every dream you've got. Muscle is metabolic armor. You don't train for the mirror. You train for life.</p>
+            <span class="more">Read →</span>
+          </div>
+        </article>
+
+        <article class="post reveal d2">
+          <div class="thumb"><span class="num">06</span><div class="stripe-rule" aria-hidden="true"><i></i><i></i><i></i><i></i></div></div>
+          <div class="pbody">
+            <div class="post-meta"><span class="chip orange">Freedom</span> <span>5 MIN</span></div>
+            <h3>The laptop is a jailbreak</h3>
+            <p>Technology kicked a hole in the wall geography used to hold you against. Build the life that fits — you're allowed to want your life while you're still alive to live it.</p>
+            <span class="more">Read →</span>
+          </div>
+        </article>
+
+        <article class="post reveal">
+          <div class="thumb"><span class="num">07</span><div class="stripe-rule" aria-hidden="true"><i></i><i></i><i></i><i></i></div></div>
+          <div class="pbody">
+            <div class="post-meta"><span class="chip mustard">Time</span> <span>4 MIN</span></div>
+            <h3>Later is a dangerous god</h3>
+            <p>Don't trade your strongest years for a retirement you may be too tired to enjoy. A bank account is useful. A life is the point. Choose awake.</p>
+            <span class="more">Read →</span>
+          </div>
+        </article>
+
+        <article class="post reveal d1">
+          <div class="thumb"><span class="num">08</span><div class="stripe-rule" aria-hidden="true"><i></i><i></i><i></i><i></i></div></div>
+          <div class="pbody">
+            <div class="post-meta"><span class="chip rust">Fear</span> <span>6 MIN</span></div>
+            <h3>Fire fear as CEO</h3>
+            <p>Fear is a con artist with excellent timing — it attacks motion. Name the monster and it shrinks. Fear is allowed in the car. It does not get to drive.</p>
+            <span class="more">Read →</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER STRIP -->
+  <section class="section capture">
+    <div class="wrap capture-inner reveal">
+      <p class="rc-eyebrow eyebrow-orange">Never miss a note</p>
+      <h2 class="rc-h2" style="margin-top:14px">New field notes, <span class="pop">straight to your inbox.</span></h2>
+      <p>One email when something new drops. No spam, no misery, no good-vibes wallpaper. Unsubscribe the second it stops being useful.</p>
+      <div style="margin-top:30px"><a href="index.html#join" class="btn btn-primary btn-lg">Join the crew →</a></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="logo-badge foot-badge">IOKTBA</span>
+        <p class="tag">It's OK to be AWESOME! — a field manual for refusing average, owning your time, and becoming awesome on purpose.</p>
+      </div>
+      <div>
+        <h4>The Book</h4>
+        <ul>
+          <li><a href="index.html#book">Overview</a></li>
+          <li><a href="index.html#chapters">Chapters</a></li>
+          <li><a href="index.html#oath">The AWESOME Oath</a></li>
+          <li><a href="index.html#about">About Ted</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="index.html#join">Field notes</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="coaching.html">Coaching</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:info@oktobeawesome.com">info@oktobeawesome.com</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span class="rc-mono">OKTOBEAWESOME.COM · © <span id="yr"></span> TED HEBERT</span>
+      <div class="stripe-rule short thin" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    </div>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Back to top"><i data-lucide="arrow-up" width="22" height="22"></i></button>
+
+<script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script defer src="site.js"></script>
+</body>
+</html>

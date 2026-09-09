@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Local Claude Code settings (may contain machine-specific paths and signed URLs)
+.claude/settings.local.json
+**/.claude/settings.local.json
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+out/
+
+# Environment
+.env
+.env.*
+
+# Not part of the website source ------------------------------------
+# Launch video project (remotion sources, raw clips, rendered output)
+Video/
+
+# Manuscript drafts and working notes
+Files/
+
+# Personal photo library (site images live in assets/)
+Ted/
+
+# Local copies of agent skills
+Skills/
